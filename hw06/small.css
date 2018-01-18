@@ -1,0 +1,50 @@
+#header{
+	border: none;
+	background: none;
+	margin: 0;
+	display:inline;
+}
+
+.headElement{
+	border: solid 10px #bbb;	
+	background: #eee;
+}
+
+#headLeft{
+	width: 98%;
+	margin: 1%;
+	clear: both;
+}
+
+#headLeft h1{
+	border: none;
+	margin:0;
+	padding:0;
+}
+
+#headCenter{
+	float: left;
+	width:48%;
+	margin: 1%;
+}
+#headCenter img{
+	width:100%;
+}
+
+#headRight{
+	font-size: 125%;
+	float:right;
+	width: 48%;
+	margin: 1%;
+	padding:0;
+}
+
+#poem1{
+	width: 98%;
+	margin: 1%;
+}
+
+#form1{
+	width:98%;
+	margin:1%;
+}

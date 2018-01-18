@@ -1,7 +1,0 @@
-build linked list
-calculate metaphone value for list
-parse book and check each word for each word in the book
-	search linked list for word
-	if not found 
-		list suggestions
-

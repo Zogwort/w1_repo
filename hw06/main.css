@@ -1,0 +1,130 @@
+body{
+	box-sizing:border-box;
+	margin: auto;
+	margin-top: 50px; 
+	max-width: 1000px;
+	background-color:#d1d1d1;
+}
+
+*,*:before, *:after{
+	box-sizing:inherit;
+}
+
+#page{	
+	width:90%;
+	margin:5%;
+}
+
+#clock{
+	float:right;
+}
+
+#header{
+	width:98%;
+	margin:1%;
+	display:flex;
+	clear:both;
+	border: 10px solid #aaa;
+	background-color:#EEE;
+}
+
+#headLeft{
+	width:40%;
+	float:left;
+	margin: auto;
+	
+}
+
+#headLeft h1{
+	text-align: center;
+	margin:0px calc(40% - 40px);
+	padding:1%;
+	border: solid 5px #bbb;
+}
+
+#headCenter img{	
+	width:120px;	
+}
+
+#headCenter{
+	width:30%;
+	margin:auto;
+	
+	text-align: center;
+} 
+
+#headRight{
+	width: 30%;
+	text-align:center;
+	margin: auto;
+	
+}
+
+#navBar{
+	float:left;
+	width:28%;
+	margin:1%;
+}
+
+#navBarMenu{
+	border: 10px solid #888;
+}
+
+#navBarMenu ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    background-color: #f1f1f1;
+}
+
+#navBarMenu li a {
+    display: block;
+    color: #000;
+	background: #afafaf;	
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#navBarMenu li a:hover {
+    background-color: #555;
+    color: #FFF;
+}
+
+#content{
+	float:right;
+	width:68%;
+	margin:1%;
+}
+
+#text1{
+	width:100%;
+	border: 10px solid #708090;
+	background: #89a;
+	padding: 1%;
+}
+
+#form1{
+	border: 10px solid #788776;
+	background: #9EB09B;	
+	width:48%;
+	margin: 2% 2% 2% 0;
+	padding: 1%;
+	float:left;
+}
+
+#poem1{
+	border: 10px solid #805349;
+	background: #D88F7F; 
+	width:48%;
+	margin:2% 0 2% 2%;
+	padding: 1%;
+	float:right;
+	text-align:left;
+}
+
+#footer{
+	width:100%;
+	clear:both;
+}
+

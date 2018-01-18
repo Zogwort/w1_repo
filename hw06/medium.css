@@ -1,0 +1,75 @@
+body{
+	margin-top: 34px; 
+	max-width: 680px;
+}
+
+
+#header{
+	width:98;
+	margin: 1%;	
+}
+
+#headLeft h1{
+	padding:1%;
+	margin:calc(40% - 60px);
+}
+
+#headRight{
+	font-size: 13px;
+	text-align:left;
+}
+
+#navBar{
+	width:98%;
+	margin:1%;
+}
+#navBarMenu ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navBarMenu li {
+    float: left;
+	width:20%;
+}
+
+#navBarMenu li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding:0;
+    text-decoration: none;
+}
+
+#navBarMenu li a:hover {
+    background-color: #111;
+}
+
+#content{
+	float:right;
+	width:98%;
+	margin: 1%;
+}
+
+#text1{
+	width:100%;
+	
+}
+
+#form1{
+	width:68%;
+	margin: 2% 2% 2% 0;
+}
+
+#poem1{
+	width:30%;
+	margin: 2% 0;
+}
+
+#footer{
+	width:100%;
+	clear:both;
+}

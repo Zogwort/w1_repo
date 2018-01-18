@@ -3,36 +3,44 @@
 
 	<head>
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="medium.css" media="screen and (max-width:740px)">	
+		<link rel="stylesheet" type="text/css" href="small.css" media="screen and (max-width:550px) or (orientation:portrait)" >
+		<script src="clock.js"></script>
+		<script src="javascript.js"></script>
 		<meta http-equiv="content-type" content="text/html; charset=tf-8"/>
 	</head>
 
-	<body><div id="page">
-
+	<body>
+		<div id="page">
+		<span id="clock">Current Time</span>
+        </br></br>
 		<div id="header">
 	
 			<div id="headLeft" class="headElement">
+				<div id="title">		
+				<h1> Zogwort </h1>
+				</div>
+			</div>
+		
+			<div id="headCenter" class="headElement">
 			
-				<img src="http://blog.world-mysteries.com/wp-content/uploads/2011/05/alchemy_symbol_strong.gif" />
+				<img src="alchemy.gif" />
 			</div>
 
-			<div id="headCenter" class="headElemetn">
-				
-				<h1> Shapes </h1>
 
-			</div>
-			
+	
 			<div id="headRight" class="headElement">
 				
 				<ul>
 					<li style="color:#FF121:2">Miller Atkinson</li>
-					<li>Email:<a href="mailto:milleratkinson98@gmail.com"> milleratkinson98@gmail.com</a> </li>
+					<li>Email:<a href="mailto:milleratkinson98@gmail.com">Gmail</a> </li>
 					<li>Cell: (832) 341-3551</li>
-					<li>Website: <a href="http://www.zogwort.com">www.zogwort.com</a></li>
+					<li>Website: <a href="http://www.zogwort.com">Zogwort.com</a></li>
 				</ul>
 
 			</div>
-
+		
 		</div>
 		
 
@@ -65,6 +73,7 @@
 	
 				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta suscipit orci at condimentum. Mauris interdum ligula purus, eget porttitor libero aliquet non. Curabitur pharetra felis diam, nec ultricies nunc rutrum at. Etiam id maximus risus, ut congue odio. Praesent pellentesque fringilla aliquam. Donec pharetra pharetra egestas. In nec sagittis dolor. Sed ullamcorper neque sed nibh fringilla hendrerit. Proin volutpat quam finibus magna lobortis, at ultrices purus varius. Maecenas non nisi tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce venenatis enim elit, at sagittis ipsum ultrices nec. </p>
 			
+			<button onclick="minimize('text1')">Minimize</button>
 			</div>
 	
 			<div id="form1">
@@ -80,27 +89,25 @@
 			</div>
 	
 			<div id="poem1">
-				<pre>
-On The Kuangchang Road
-
-The whole wide world is white, 
-Through the snow eagerly we press on. 
-Crags loom above our heads, 
-We cross the great pass, red flags waving in the wind. 
-Where are we bound? 
-To the snow-swept River Kan. 
-Yesterday the order was given, 
-One hundred thousand workers and peasants march on Kian.
-
--Mao Tse Tung
-				</pre>
+				<p>
+						On The Kuangchang Road</br></br>
+						The whole wide world is white,</br> 
+						Through the snow eagerly we press on.</br> 
+						Crags loom above our heads,</br> 
+						We cross the great pass, red flags waving in the wind.</br> 
+						Where are we bound?</br> 
+						To the snow-swept River Kan.</br> 
+						Yesterday the order was given,</br> 
+						One hundred thousand workers and peasants march on Kian</br></br></br>
+						-Mao Tse Tung</br>
+				</p>
 			</div>
 	
 		</div>
 		<div id="footer">
 			<p>Created by Miller Atkinson</p>
 		</div>
-	
-	</div></body>
+	</div>
+	</body>
 
 </html>

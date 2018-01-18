@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Shopping List App</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="normalize.min.css" />
+
+	<style>
+		html {
+			box-sizing:border-box;
+		}
+
+		*,*:before,*:after {
+			box-sizing:inherit;
+		}
+
+		body {
+			background-color:#bbb;
+			color:#483D8B;
+			font-size:12pt;
+			max-width:960px;
+			margin:0 auto;
+		}
+
+		input {
+			background-color:#ddd;
+			color:#483D8B;
+		}
+
+		button {
+			color:#483D8B;
+		}
+
+		section {
+			background-color:#ccc;
+			min-height:500px;
+			width:50%;
+			float:left;
+			padding:5px;
+			border:5px inset;
+		}
+
+		h1,h2 { text-align:center; }
+
+		#the-list input {
+			background-color:#ccc;
+			border:none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container_12">
+		<h1>Shopping List App</h1>
+		<section id="control-panel">
+			<h2>Control Panel</h2>
+			<input type="text" id="new-item" />
+			<button id="add">Add</button>
+			<button id="del">Delete List</button>
+			<button id="mark">Mark All</button>
+			<button id="unmark">Unmark All</button>
+		</section>
+		<section id="the-list">
+			<h2>The List</h2>
+			<ul>
+			</ul>
+		</section>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("#add").click(function() {
+			var newbutton;
+			$("#the-list ul").append("<li><input type=\"text\" value=\""+$("#new-item").val()+"\"/><button>X</button></li>");
+			$("#new-item").val("");
+	});		
+	
+		$('#new-item').on('keypress', function (e){
+			if(e.which == 13){
+				
+				$(this).attr("disabled", "disabled");
+				
+				$("#the-list ul").append("<li><input type=\"text\" value=\""+$("#new-item").val()+"\"/><button>X</button></li>");
+				$("#new-item").val("");
+
+
+				$(this).removeAttr("disabled");
+			}	
+	});
+	
+		$("#the-list").on("click","button",function(event) {
+			var val= $(this).prev().css("text-decoration").search(/none/)==0 ? "line-through" : "none";
+			$(this).prev().css("text-decoration",val);
+			event.stopPropagation();
+		});
+
+		$("#del").click(function() {
+			$("#the-list ul").empty();
+		});
+		
+		$("#mark").click(function(){
+			$("#the-list [type=text]").css("text-decoration","line-through");
+		});
+
+		$("#unmark").click(function(){
+			$("#the-list [type=text]").css("text-decoration","none");
+		});
+	
+		})
+	</script>
+</body>
+</html>

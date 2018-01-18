@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+NOTE: The documents form1.html through formx.html show incremental improvements of this form.
+
+Improvements over previous version:
+	* add validation
+
+Some things to work on for next version:
+	* no popups!
+-->
+<html>
+<head>
+	<title>Form Practice #5</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+	<link href="template/css/normalize.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	body {
+		font:12pt Varela Round,sans-serif;
+	}
+	form {
+		background-color:#dddddd;
+		width:338px;
+		padding:10px;
+		margin:10px auto;
+		border:1px solid;
+		-moz-box-shadow: 3px 3px 4px #000;
+		-webkit-box-shadow: 3px 3px 4px #000;
+		box-shadow: 3px 3px 4px #000;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+	}
+
+	select { cursor:pointer; }
+	input:not(#submitbutton), select {
+		background-color:#eeeeee;
+		color:#555555;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	form label, form .col2, form .radio { display:inline; float:left; }
+	form label { width:130px; margin:4px 0 9px 0; }
+	form .col2 { width:195px; padding-left:5px; }
+	form .radio { width:95px; text-align:center; cursor:pointer; display:inline; }
+	form h2 { text-align:center; margin-top:0px; }
+	div.clear { clear:both; }
+
+	#submitbutton { width:100%; }
+	</style>
+
+	<script>
+	function checkForm()
+	{
+		var msg= "";
+		if (document.getElementById("namebox").value.search(/^\s*$/)==0)
+			msg+= " * Name is required\n";
+		if (document.getElementById("phonebox").value.search(/^\d{3}-\d{3}-\d{4}$/)==-1)
+			msg+= " * Phone must be of form ###-###-####\n";
+		if (document.getElementById("colorbox").value==0)
+			msg+= " * Color is required\n";
+		if (!document.getElementById("happy").checked && !document.getElementById("unhappy").checked)
+			msg+= " * Must indicate your level of happiness\n";
+
+		if (msg!='')
+		{
+			alert(msg);
+			return false;
+		}
+
+		return true;
+	}
+	</script>
+</head>
+
+<body>
+	<form method="post" action="mailto:tsergeant@hsutx.edu" onsubmit="return checkForm()">
+		<h2>An Amazing Form</h2>
+		<label>Name</label>
+		<input type="text" class="col2" id="namebox"/>
+		<div class="clear"></div>
+
+		<label>Phone Number</label>
+		<input type="text" class="col2" id="phonebox"/>
+		<div class="clear"></div>
+
+		<label>Favorite Color</label>
+		<select class="col2" id="colorbox">
+			<option value="0">Choose a Color</option>
+			<option value="1">Red</option>
+			<option value="2">Green</option>
+			<option value="3">Blue</option>
+		</select>
+		<div class="clear"></div>
+
+		<label>Happiness</label>
+		<div class="col2">
+			<label for="happy" class="radio">Happy</label><label for="unhappy" class="radio">Unhappy</label>
+		 	<span class="radio"><input type="radio" name="happiness" value="happy" id="happy"/></span>
+			<span class="radio"><input type="radio" name="happiness" value="unhappy" id="unhappy"/></span>
+		</div>
+		<div class="clear"></div>
+		<br/>
+		<input type="submit"  value="I'm Done" id="submitbutton"/>
+	</form>
+</body>
+</html>
+

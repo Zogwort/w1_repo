@@ -1,88 +1,105 @@
-* {
-	--waybackground: #19231A;
-	--forebackground: #ABB557;
-	--bordercolor: #8B9556;
-	--textcolor: #756D54;
-	--titlecolor: #6D545D;
-
-	--borderalt: #4A5240;
-	--foregroundalt: #285238;
+body{
+	background-color:#d1d1d1;
 }
 
+div{
 
-body {
-	background-color:var(--waybackground);
+}
+
+#page{
+	width:95%;
+	margin: auto;
+}
+
+#header{
+	display:flex;
+	clear:both;
+	border:ridge;
+	border-color: #F00 #000 #000 #F00;
+	border-width: 16px;
+	background-color:#FFF;
+	}
+
+.headElement{
+	flex: 1;
+	width:30%;
+}
+
+#headLeft{
+
+}
+
+#headLeft img{
+	height:120px;	
+}
+
+#headCenter{
+
+}
+
+#headCenter h1{
+	border:ridge;
+	border-color: #000 #F00 #F00 #000;
+	border-width: 8px;
+
+} 
+
+#headRight{
 	text-align:center;
-	font-size: 2vw;
 }
 
-p {
-	color:var(--textcolor);
-	font-size:1.vw;
-	text-align:left;
-}
-
-li {
-	color:var(--textcolor);
-	font-size:1.5vw;
-	text-align:left;
-}
-
-h1 {
-	color:var(--titlecolor);
-	font-size: 4vw;
-	margin: auto;
-}
-
-h2 {
-	color:var(--titlecolor);
-	font-size: 3vw;
-	margin: auto;
-}
-
-#title{
-	color:var(--titlecolor);
-	background-color:var(--forebackground);
-	margin: 5vw auto;
-	border: .8vw solid var(--bordercolor);
-	width: 48vw;	
-	border-radius:2vw;
-}
-
-#body {
-	background-color:var(--forebackground);
-	color:var(--textcolor);
-	width:90%;
-	margin: 4vw auto;
-	border: .8vw solid var(--bordercolor);
-	border-radius:2vw;
-}
-
-.header {
-	width:100%;
-	border: 0;
-	border-radius:1vw 1vw 0 0;
-	background-color: var(--forebackground);
-	margin:   auto;
-	overflow: hidden;	
-}
-
-.subHeader {
-	text-decoration:none;
-	color: var(--textcolor);
-	width:20%;
-	border-bottom:8px solid var(--bordercolor);
+#navBar{
 	float:left;
-	margin: 0 auto;	
+	width:28%;
+	margin:1%;
+	height:100%;
 }
 
-.subHeader:hover{
-	border-bottom: 8px solid var(--borderalt);
-	background-color: var(--foregroundalt);
+#navBarMenu{
+	border: 8px solid #888;
+	background: #afafaf;	
 }
 
-.content {
-	margin: 15px;
-	padding: 15px;
+#navBar a:hover{
+	color:#F00;
+}
+
+#content{
+	float:right;
+	width:68%;
+	margin: 1%;
+}
+
+#text1{
+	border: 8px solid #708090;
+	background: #89a;
+	padding: 2%;
+	margin:0 auto;
+}
+
+#form1{
+	border: 4px solid #788776;
+	background: #9EB09B;	
+	width:45%;
+	margin:1%;
+	padding: 1%;
+	position:relative;
+	float:left;
+}
+
+#poem1{
+	border: 4px solid #805349;
+	background: #D88F7F; 
+	width:45%;
+	margin:1%;
+	padding: 1%;
+	position:relative;
+	float:right;
+	text-align:left;
+}
+
+#footer{
+	width:100%;
+	clear:both;
 }
 
